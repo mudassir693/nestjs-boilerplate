@@ -1,0 +1,23 @@
+version: '3.8'
+services:
+    boilerplate.db:
+        image: 'postgres:13'
+        container_name: boiler_plate.db
+        ports:
+            - 5434:5432
+        # networks:
+        #     - boiler_plate
+        environment:
+            POSTGRES_USER: root
+            POSTGRES_PASSWORD: root
+            POSTGRES_DB: boiler_plate_db
+            POSTGRES_HOST_AUTH_METHOD: trust
+        # volumes:
+        #     - 'boiler_plate_postgres_data:/var/lib/postgresql'
+        # networks:
+        #     - boiler_plate-network
+# volumes:
+#     boiler_plate_postgres_data:
+#         external: true
+# networks:
+#     boiler_plate-network:
